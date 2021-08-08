@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    
+    <div class="container-fluid"> 
+      <h1 class="heading">Groceries To-do List</h1>  
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">Groceries</h1>
+            </div>
+            <div class="container mt-3">
+                <h2>Add Items</h2>
+           
+                <label id="lblsuccess" class="text-success" 
+                        style="display: none;">
+                </label>
+                  
+                <form id="addForm">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-7">
+  
+                    <input type="text" onkeyup=
+                        "toggleButton(this, 'submit')"
+                        class="form-control" id="item">
+                </div>
+  
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                  <input type="submit" class="btn btn-dark"
+                        id="submit" value="Submit" disabled>
+                </div>
+            </div>
+            </form>
+            <h3 class="mt-4">Tasks</h3>
+   
+            <form id="addForm">
+                <ul class="list-group" id="items"></ul>
+            </form>
+              <div itemid="itm-1" class="btn btn-default box-item">Poppy seeds <span class="close">&times;</span></div>
+              <div itemid="itm-2" class="btn btn-default box-item">Coriander seeds <span class="close">&times;</span></div>
+              <div itemid="itm-3" class="btn btn-default box-item">Mustard seeds <span class="close">&times;</span></div>
+              <div itemid="itm-4" class="btn btn-default box-item">Cumin seeds <span class="close">&times;</span></div>
+              <div itemid="itm-5" class="btn btn-default box-item">Bakery and Bread <span class="close">&times;</span></div>
+              
+             
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">In Process</h1>
+            </div>
+            <div id="container2" class="panel-body box-container"></div>
+          </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h1 class="panel-title">Delivered</h1>
+              </div>
+              <div id="container3" class="panel-body box-container"></div>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+        
+  </body>
+
+</html>
+
